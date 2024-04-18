@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 600px;
+        width: 450px;
+        background-color: rgba(255,255,255,0.13);
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 50px 35px;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: #080710;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #080710;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1>No Stories Genrated</h1>
+        <a href="{% url 'prompt' %}">Generate Prompt</a>
+    </div>
+</body>
+</html>
