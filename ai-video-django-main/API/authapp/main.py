@@ -15,10 +15,10 @@ def main_story(title,lang,loc,pic):
         download_data_from_s3(loc)
     try:
         try:
-            story1=g_model(f"act as professional story writter with 100 year experience. write an impressive story for child. its must be correlated and in sequency. the story description is = {title},story language ={lang}. negative prompts= low quality text, boring, not looks story, not attractive. ")
+            story1=g_model(f"act as professional story writter for childrens with 100 year experience. write an impressive story for child. its must be correlated and in sequency. the story description is = {title},story language ={lang}. ")
         except:
             time.sleep(3)
-            story1=g_model(f"act as professional story writter with 100 year experience. write an impressive story for child. its must be correlated and in sequency. the story description is = {title},story language ={lang}. negative prompts= low quality text, boring, not looks story, not attractive. ")
+            story1=g_model(f"act as professional story writter for childrens with 100 year experience. write an impressive story for child. its must be correlated and in sequency. the story description is = {title},story language ={lang}. ")
     except:
         print("issue with story generation")
         pass
