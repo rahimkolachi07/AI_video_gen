@@ -178,7 +178,7 @@ def text_to_speech(text, lang, output, output_format='mp3'):
         if z==1:  # Check if voice_id2 is assigned a value
             response = polly_client.synthesize_speech(
                 Text=text,
-                VoiceId=voice_id2,
+                VoiceId="Ivy",
                 OutputFormat=output_format,
                 Engine="neural"
             )
