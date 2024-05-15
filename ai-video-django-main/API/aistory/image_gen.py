@@ -12,7 +12,7 @@ def image_gen(loc,prompts,i):
     try:
         API_URL = "https://api-inference.huggingface.co/models/cagliostrolab/animagine-xl-3.0"
         headers = {"Authorization": "Bearer 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"}
-        image_bytes = query({"inputs": f"{prompts}",},API_URL,headers)
+        image_bytes = query({"inputs": f"{prompts}. generate image for childs, as cartoon, for childrens, generate image bright, colorful and positvie ",},API_URL,headers)
         # Attempt to open the image
         image = Image.open(io.BytesIO(image_bytes))
         # Display or process the image as needed
@@ -22,7 +22,7 @@ def image_gen(loc,prompts,i):
         try:
             API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1"
             headers = {"Authorization": "Bearer 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"}
-            image_bytes = query({"inputs": f"{prompts}",},API_URL,headers)
+            image_bytes = query({"inputs": f"{prompts} generate image for childs, as cartoon, for childrens, generate image bright, colorful and positvie",},API_URL,headers)
             # Attempt to open the image
             image = Image.open(io.BytesIO(image_bytes))
             # Display or process the image as needed
@@ -32,7 +32,7 @@ def image_gen(loc,prompts,i):
 
             API_URL = "https://api-inference.huggingface.co/models/sayakpaul/diffusion-sdxl-orpo"
             headers = {"Authorization": "Bearer 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"}
-            image_bytes = query({"inputs": f"{prompts}",},API_URL,headers)
+            image_bytes = query({"inputs": f"{prompts}. generate image for childs, as cartoon, for childrens, generate image bright, colorful and positvie",},API_URL,headers)
             # Attempt to open the image
             image = Image.open(io.BytesIO(image_bytes))
             # Display or process the image as needed

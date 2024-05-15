@@ -57,44 +57,7 @@ class MultipleImageUploadForm(forms.Form):
         }), required=False)
     
     input_field = forms.CharField(label='Input Field')
-    select_field = forms.ChoiceField(label='Select Field', choices=[('Arabic', 'arb'),
-    ('Arabic (Gulf)', 'Arabic (Gulf) ar-AE'),
-    ('Catalan', 'Catalan ca-ES'),
-    ('Chinese (Cantonese)', ' Chinese (Cantonese) yue-CN'),
-    ('Chinese (Mandarin)', 'Chinese (Mandarin) cmn-CN'),
-    ('Danish', 'Danish da-DK'),
-    ('Dutch (Belgian)', 'Dutch (Belgian) nl-BE'),
-    ('Dutch', 'Dutch nl-NL'),
-    ('English (Australian)', 'English (Australian) en-AU'),
-    ('English (British)', 'English (British) en-GB'),
-    ('English (Indian)', 'English (Indian) en-IN'),
-    ('English (New Zealand)', 'English (New Zealand) en-NZ'),
-    ('English (South African)', 'English (South African) en-ZA'),
-    ('English (US)', 'English (US) en-US'),
-    ('English (Welsh)', 'English (Welsh) en-GB-WLS'),
-    ('Finnish', 'Finnish fi-FI'),
-    ('Hindi', 'Hindi hi-IN'),
-    ('French', 'French fr-FR'),
-    ('French (Belgian)', 'French (Belgian) fr-BE'),
-    ('French (Canadian)', 'French (Canadian) fr-CA'),
-    ('German', 'German de-DE'),
-    ('German (Austrian)', 'German (Austrian) de-AT'),
-    ('Icelandic', 'Icelandic is-IS'),
-    ('Italian', 'Italian it-IT'),
-    ('Japanese', 'Japanese ja-JP'),
-    ('Korean', 'Korean ko-KR'),
-    ('Norwegian', 'Norwegian nb-NO'),
-    ('Polish', 'Polish pl-PL'),
-    ('Portuguese (Brazilian)', 'Portuguese (Brazilian) pt-BR'),
-    ('Portuguese (European)', 'Portuguese (European) pt-PT'),
-    ('Romanian', 'Romanian ro-RO'),
-    ('Russian', 'Russian ru-RU'),
-    ('Spanish (European)', 'Spanish (European) es-ES'),
-    ('Spanish (Mexican)', 'Spanish (Mexican) es-MX'),
-    ('Spanish (US)', 'Spanish (US) es-US'),
-    ('Swedish', 'Swedish sv-SE'),
-    ('Turkish', 'Turkish tr-TR'),
-    ('Welsh', 'Welsh cy-GB')])
+    select_field = forms.ChoiceField(label='Select Field', choices=[('English (US)', 'English (US) en-US')])
 
 @method_decorator(login_required(login_url='login'), name='dispatch')
 class Prompt(View):
