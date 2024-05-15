@@ -185,7 +185,7 @@ def text_to_speech(text, lang, output, output_format='mp3'):
         else:
             response = polly_client.synthesize_speech(
                 Text=text,
-                VoiceId=voice_id2,
+                VoiceId="Ivy",
                 OutputFormat=output_format
             )
     except Exception as e:

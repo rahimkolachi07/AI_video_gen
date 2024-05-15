@@ -15,10 +15,10 @@ def main_story(title,lang,loc,pic):
         download_data_from_s3(loc)
     try:
         try:
-            story1=g_model(f"act as professional story writter with 100 year experience. write an impressive story. its must be correlated and in sequency. the story description is = {title},story language ={lang}. negative prompts= low quality text, boring, not looks story, not attractive. ")
+            story1=g_model(f"act as professional story writter with 100 year experience. write an impressive story for child. its must be correlated and in sequency. the story description is = {title},story language ={lang}. negative prompts= low quality text, boring, not looks story, not attractive. ")
         except:
             time.sleep(3)
-            story1=g_model(f"act as professional story writter with 100 year experience. write an impressive story. its must be correlated and in sequency. the story description is = {title},story language ={lang}. negative prompts= low quality text, boring, not looks story, not attractive. ")
+            story1=g_model(f"act as professional story writter with 100 year experience. write an impressive story for child. its must be correlated and in sequency. the story description is = {title},story language ={lang}. negative prompts= low quality text, boring, not looks story, not attractive. ")
     except:
         print("issue with story generation")
         pass
@@ -86,19 +86,19 @@ def promp_gen(lang,loc,pic):
                 if image_paths[i]:
                     try:
                         img = Image.open(image_paths[i])
-                        image_pro=gv_model(f"i have an image and text. based on both image and text you have to create an image generation prompt which must reflect both things. and this is text=f{para}. generate an best prompt and details prompts",img)
+                        image_pro=gv_model(f"i have an image and text. based on both image and text you have to create an image generation prompt for child  which must reflect both things. and this is text=f{para}. generate an best prompt and details prompts",img)
                     except:
-                        image_pro=g_model(f"convert given text into image generation prompet, prompet must be accurate and reflect the text. image must be hight resolution and landscape. text=f{para}. generate an best prompt and details prompts. focuse must be on charector ")
+                        image_pro=g_model(f"convert given text into image generation prompet for child , prompet must be accurate and reflect the text for child . image must be hight resolution and landscape. text=f{para}. generate an best prompt and details prompts. focuse must be on charector ")
 
                 else:
              
-                    image_pro=g_model(f"convert given text into image generation prompet, prompet must be accurate and reflect the text. image must be hight resolution and landscape. text=f{para}. generate an best prompt and details prompts. focuse must be on charector ")
+                    image_pro=g_model(f"convert given text into image generation prompet for child , prompet must be accurate and reflect the text for child . image must be hight resolution and landscape. text=f{para}. generate an best prompt and details prompts. focuse must be on charector ")
             except:
                 image_pro=g_model(f"convert given text into image generation prompet, prompet must be accurate and reflect the text. image must be hight resolution and landscape. text=f{para}. generate an best prompt and details prompts. focuse must be on charector ")
         else:
-            image_pro=g_model(f"convert given text into image generation prompet, prompet must be accurate and reflect the text. image must be hight resolution and landscape. text=f{para}. generate an best prompt and details prompts. focuse must be on charector ")
+            image_pro=g_model(f"convert given text into image generation prompet for child , prompet must be accurate and reflect the text for child . image must be hight resolution and landscape. text=f{para}. generate an best prompt and details prompts. focuse must be on charector ")
 
-        image_gen(loc,image_pro+".high resultion image. negative_prompt = nsfw, lowres, (bad), text, error, fewer, extra, missing, worst quality, jpeg artifacts, low quality, watermark, unfinished, displeasing, oldest, early, chromatic aberration, signature, extra digits, artistic error, username, scan, [abstract]",i)
+        image_gen(loc,image_pro+".high resultion image. 4k image quality",i)
     return image_pro
 #story=main_story("the poor young boy fall in love","English (US)","raheem/034")
 
